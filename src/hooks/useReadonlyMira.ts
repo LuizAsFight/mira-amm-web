@@ -7,6 +7,7 @@ const useReadonlyMira = () => {
   const provider = useProvider();
 
   return useMemo(() => {
+    console.log("Creating readonly mira with network", provider?.url, "and contract id", DEFAULT_AMM_CONTRACT_ID);
     if (provider) {
       return new ReadonlyMiraAmm(
         provider,
